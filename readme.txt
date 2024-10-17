@@ -108,7 +108,8 @@ define('DB_PASSWORD', 'Azerty123!');
 
 <VirtualHost *:80>
     ServerName wordpress-extra.julien-hennebo.cloudns.be
-    DocumentRoot /var/www/html  # Point vers le répertoire html
+    DocumentRoot /var/www/html
+  # Point vers le répertoire html
 
     <Directory /var/www/html>
         AllowOverride All
@@ -121,6 +122,8 @@ define('DB_PASSWORD', 'Azerty123!');
 Activez le site et le module rewrite : Exécutez les commandes suivantes pour activer le site et le module de réécriture, si ce n'est pas déjà fait :
 sudo a2ensite wordpress-extra.conf
 sudo a2enmod rewrite
+si travaille en local ajouter a etc/host
+127.0.0.1 votrenomdedomaine
 sudo systemctl reload apache2
 
 
